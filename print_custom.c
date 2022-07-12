@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 
 /**
  * print_bigS - Non printable characters
@@ -22,7 +22,7 @@ for (i = 0; s[i]; i++)
 {
 if (s[i] > 0 && (s[i] < 32 || s[i] >= 127))
 {
-puts("\\x");
+_puts("\\x");
 count += 2;
 res = convert(s[i], 16, 0);
 if (!res[1])
@@ -52,7 +52,7 @@ s = "(null)";
 while (s[i])
 i++;
 for (j = i - 1; j >= 0; j--)
-putchar(s[j]);
+_putchar(s[j]);
 return (i);
 }
 
@@ -73,13 +73,13 @@ char *s = va_arg(l, char *);
 for (j = 0; s[j]; j++)
 {
 if (s[j] < 'A' || (s[j] > 'Z' && s[j] < 'a') || s[j] > 'z')
-putchar(s[j]);
+_putchar(s[j]);
 else
 {
 for (i = 0; i <= 52; i++)
 {
 if (s[j] == rot13[i])
-putchar(ROT13[i]);
+_putchar(ROT13[i]);
 }
 }
 }
