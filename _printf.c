@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 
 /**
  * _printf - produces output according to a format
@@ -39,7 +39,7 @@ count += (pfunc)
 } else
 count += _putchar(*p);
 }
-putchar(-1);
+_putchar(-1);
 va_end(arguments);
 return (count);
 }
